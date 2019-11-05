@@ -4,7 +4,8 @@ class Residence < ApplicationRecord
       puts 'A residence was touched'
     end
      validate :word_count_is_more_than_25
-  
+     
+
     validates :title, length: {is: 5}
     # validates :description, length: {maximum: 25}
     validates :available, inclusion: [true, false]
@@ -17,10 +18,16 @@ class Residence < ApplicationRecord
     #    :tokenizer => lambda { |str| str.scan(/\w+/) },  
     #    :too_short => "Description must be at least %{count} words"}
   
-    validates_each :title, :description do |category, attr, value|
-      category.errors.add(attr, 'must start with upper case')if
-          value =~ /\ A [[:lower:]]/
-    end
+    # validates_each :title, :description do |category, attr, value|
+    #   category.errors.add(attr, 'must start with upper case')if
+    #       value =~ /\ A [[:lower:]]/
+    # end
+      before_save :capitalize_title
+
+        def capitalize_title 
+          self.title.capitalize!  
+          # errors.add(:title, "Must start with upper case") if value =~ /\A[a-z]/ 
+        end  
     
       def word_count_is_more_than_25
          errors.add(:residence, "Error") if description.split(" ").size < 25
