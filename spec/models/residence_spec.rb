@@ -98,6 +98,16 @@ require 'rspec/rails'
          expect(residence).to_not be_valid
       end
 
+      it "should be capitalize the title when saving" do
+        residence = Residence.new(
+          title: 'name1',
+          description: "one two three four five six seven eight nine ten" * 3,
+          available: true, unit: 1234, rent: 012345, category: Category.new(title: "category title"))
+        residence.save
+        
+        expect(residence.title).to eq("Name1")
+      end
+
     end
   end
 
