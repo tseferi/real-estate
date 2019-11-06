@@ -7,4 +7,4 @@ RSpec.describe Residence, :type => :model do
       category.valid?
       category.errors.should have_key(:title)
   end
-end
+end  
