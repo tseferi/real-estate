@@ -36,7 +36,7 @@ RSpec.describe Residence, type: :model do
 
    it "is invalid if the rent is too low" do
      residence = Residence.new(
-       title: 'Name1',
+       title: 'Name1' ,
        description: "one two three four five six seven eight nine ten" * 3,
        available: true, unit: 1234, rent: 0123, category: Category.new(title: "category title"))
       expect(residence).to_not be_valid

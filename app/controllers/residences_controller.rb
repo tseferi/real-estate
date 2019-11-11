@@ -1,10 +1,10 @@
 class ResidencesController < ApplicationController
     def index
-        @residences = Residence.all
+        @residences = Residence.last(6)
     end
 
     def show
-        @residence = Residence.first # params[:id]
+        @residence = Residence.find params[:id] # params[:id]
     end
 
     def new

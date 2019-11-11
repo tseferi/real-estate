@@ -1,33 +1,37 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
-.btn{
+.btn {
     @apply inline-block px-5 py-3 rounded-lg text-sm uppercase tracking-wider font-semibold;
 }
 
-.btn:focus{
+.btn:focus {
     @apply outline-none shadow-outline;
 }
 
-.btn-orange{
+.btn-orange {
     @apply bg-orange-500 text-white;
 }
-.btn-orange:hover{
+
+.btn-orange:hover {
     @apply bg-orange-400;
 }
 
-.btn-orange:active{
+.btn-orange:active {
     @apply bg-orange-600;
 }
 
-.btn-gray{
+.btn-gray {
     @apply bg-gray-400 text-gray-800;
 }
-.btn-grey:hover{
+
+.btn-grey:hover {
     @apply bg-gray-300;
 }
 
-.btn-grey:active{
+.btn-grey:active {
     @apply bg-gray-600;
 }
+
 @import "tailwindcss/utilities";
+
