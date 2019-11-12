@@ -1,27 +1,65 @@
-<div class="flex flex-wrap px-3">
+<div class="flex flex-wrap px-12 py-24 justify-center">
     <div class="w-full lg:w-1/2 xl:w-1/3 p-5">
-        <img class="w-full mt-6 shadow-lg sm:mt-2 sm:h-64 sm:w-full sm:object-cover sm:object-center"
-            src="http://www.urbancondospaces.com/wp-content/blogs.dir/1/files/2016/02/29260_9_2_1.jpg " atl="Apartment">
+        <img class="w-full mt-6 shadow-lg sm:mt-2 sm:h-68 sm:w-full sm:object-cover sm:object-center"
+            src="http://www.urbancondospaces.com/wp-content/blogs.dir/1/files/2016/02/29260_9_2_1.jpg" atl="Apartment">
 
     </div>
 
 
     <div class="px-6 py-4 bg-white max-w-sm rounded-lg shadow-lg">
-        <h1 class="font-semibold text-gray-800 text-lg leading-tight truncate"><%= @residence.title %></h1>
-        <h2 class="inline-block font-semibold text-gray-700 text-l tracking-wide"> Availability: <%= @residence.available %>
-            <br>
-            Unit: <%= @residence.unit %>
-            <br> Rent: <%= @residence.rent %>
-            Category: <%= @residence.id %>
+        <p class="uppercase tracking-wide font-bold text-gray-800 text-lg leading-tight truncate">
+            <%= @residence.title %></p>
+        <br>
+        <p class="font-semibold text-lg text-gray-800"> Rent •<%= @residence.rent %> $ </p>
 
-        </h2>
-
-
-        <span class="mt-2 text-gray-600 text-s font-thinner leading-tight ">
-           <br> <%= @residence.description %>
-        </span>
-
-
+        <p class="font-semibold text-gray-700"> Unit •<%= @residence.unit %> <br> Availability
+            •<%= @residence.available%> </p>
+        </p>
+        <div class="flex p-4 border-t border-gray-300 text-gray-700">
+            <span class="mt-2 text-gray-600 text-s font-thinner leading-tight">
+                <%= @residence.description %>
+            </span>
+        </div>
+        <div class="flex-1 inline-flex items-center">
+            <div class="flex p-4 border-t border-gray-300 text-gray-700 flex items-center">
+                <%= image_tag"https://img.icons8.com/offices/30/000000/undergo-insomnia.png", width: 20 %>
+                <p><span class="text-orange-500 font-bold">2</span> Bedrooms</p>
+                <div class="flex-1 inline-flex items-center">
+                    <%= image_tag "https://img.icons8.com/offices/30/000000/shower-and-tub.png", width: 20 %>
+                    <p><span class="text-orange-500 font-bold">2</span> Bathrooms</p>
+                </div>
+            </div>
+        </div>
+        <div class="px-4 pt-3 pb-4 border-t border-gray-300 bg-gray-100">
+            <div class="text-xs uppercase font-bold text-orange-600 tracking-wide">Realtor</div>
+            <div class="flex items-center pt-2">
+                <div class="bg-cover bg-center w-10 h-10 rounded-full mr-3"
+                    style="background-image: url(https://via.placeholder.com/50x50)">
+                </div>
+                <div>
+                    <p class="font-bold text-gray-900">Catherine Heffner</p>
+                    <p class="text-sm text-gray-700">(111) 111-1111</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
+
+</div>
+
+
+<section style="background-color: #2B6CB0">
+    <div class="container mx-auto px-6 text-center py-20">
+        <h2 class="mb-6 text-4xl font-semibold text-center text-white">
+            Seen the place of your dreams?
+        </h2>
+        <h3 class="my-4 text-2xl text-white">
+            Book you desired estate without waiting any longer!
+        </h3>
+        <button
+            class="bg-green-500 font-bold text-gray-800 rounded-full mt-6 py-4 px-8 hover:bg-orange-300 shadow-lg uppercase tracking-wider">
+            Book now
+        </button>
+    </div>
+</section>
