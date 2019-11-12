@@ -4,12 +4,12 @@ class Residence < ApplicationRecord
     puts 'A residence was touched'
   end
   
-  # validate :word_count_is_more_than_25
+  validate :word_count_is_more_than_25
 
-  # validates :title, length: {is: 20}
-  # validates :available, inclusion: [true, false]
-  # validates :unit, length: {is: 4}
-  # validates :rent, length: {is: 6 }
+  validates :title, length: {is: 20}
+  validates :available, inclusion: [true, false]
+  validates :unit, length: {is: 4}
+  validates :rent, length: {is: 6 }
 
   before_save :capitalize_title
   def capitalize_title 
