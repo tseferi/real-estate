@@ -29,6 +29,7 @@
     </div>
 </div>
 
+        <%= render "header" %>
 
 
 <div class="flex flex-wrap px-12 py-24">
@@ -41,16 +42,16 @@
         <div class="mr-5">
             <label class="block uppercase tracking-wide text-blue-900 text-xl font-semibold mb-2" for="grid-state">
                 View: </label>
-            <div class=" ">
-                <select
-                    class="block appearance-none w-full bg-gray-200 border border-gray-200 cursor-pointer text-gray-700 hover:bg-white py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-gray-lighter focus:border-gray-lighter"
+            <div class="relative">
+                <select 
+                    class="dropdown-sort mr-3 block appearance-none w-full bg-gray-200 border border-gray-200 cursor-pointer text-gray-700 hover:bg-white py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-gray-lighter focus:border-gray-lighter"
                     id="grid-category">
                     <option>Mr. Charles Wilkinson</option>
                     <option>Laurence Rowe</option>
                     <option>Jerrod Heidenreich IV</option>
                 </select>
-                <<div class="pointer-events-none absolute flex items-center px-2 text-grey-darker">>
-                    <svg src=" " atl=" "></svg>
+                <div class="arrow-down pointer-events-none absolute flex items-center px-2 text-grey-darker">
+                    <%= image_tag "https://img.icons8.com/material-outlined/24/000000/chevron-down.png", width: 15 %>
                 </div>            
             </div>
         </div>
@@ -60,4 +61,7 @@
         <%= render "residence_card", residences: @residences %>
     </div>
 
+    <div class="flex flex-wrap w-full">
+        <%= render "amenities_card", amenities: @amenities %>
+    </div>   
 </div>
