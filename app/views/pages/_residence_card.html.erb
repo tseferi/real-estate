@@ -1,0 +1,25 @@
+<% residences.each do |residence| %>
+    <%= link_to residence_path(residence.id) do %>
+        <div class="w-full lg:w-1/4 xl:w-1/3 p-5">
+            <div class="mt-4 bg-gray-200 rounded-lg overflow-hidden shadow-xl">
+                <img class="w-full rounded-lg shadow-xs h-64 w-full object-cover object-top"
+                    src="https://xingsuo.me/i/2019/05/modern-pictures-decor-studio-ideas-photos-design-style-styles-small-kitchen-luxury-apartment-delightful-930x535.jpg"
+                    alt="Studio Apartments">
+                <div class="px-6 py-4">
+                    <div class="mb-5">
+                        <h1 class="text-blue-900 text-2xl font-semibold"><%= residence.title %></h1>
+                        <p class=" text-gray-600 text-base font-thinner tracking-wide truncate">
+                            <%= residence.description %>
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap justify-between">
+                        <button type="button"
+                            class="rounded-full px-6 mr-2 bg-green-500 text-white p-1 rounded leading-none flex items-center">
+                            New </button>
+                        <%= link_to "Read More", residence_path(residence.id), class: "underline text-base text-orange-600" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+<% end %>

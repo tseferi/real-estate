@@ -1,0 +1,38 @@
+.section{
+    @apply bg-gray-100 flex;
+
+    .sub-section {
+        @apply px-8 py-12 max-w-md mx-auto
+
+        @screen lg {
+            @apply max-w-full w-1/2 py-24 px-12;
+        }
+
+        @screen xl {
+            @apply max-w-lg ml-auto;
+        }
+
+        .header-one {
+            @apply mt-6 text-2xl font-bold text-blue-900 leading-tight
+
+            @screen sm {
+                @apply mt-8 text-4xl; 
+            }
+
+            @screen lg {
+                @apply text-3xl;
+            }
+
+            @screen xl{
+                @apply text-4xl;
+            }
+        }
+    }
+}
+
+.arrow-down {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+}
+

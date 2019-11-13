@@ -6,7 +6,7 @@ class Residence < ApplicationRecord
   
   validate :word_count_is_more_than_25
 
-  validates :title, length: {is: 5}
+  validates :title, length: {is: 20}
   validates :available, inclusion: [true, false]
   validates :unit, length: {is: 4}
   validates :rent, length: {is: 6 }

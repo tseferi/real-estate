@@ -1,70 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RealEstate</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<head>
+  <title>RealEstate</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  <body class="bg-gray-300">
-    <div class="bg-gray-100 flex">
-      <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
-        <div class="xl:max-w-lg xl:ml-auto">
-          <img class="h-12" src="http://tenbridges-re.com/wp-content/uploads/2018/02/tenbridges-logo_color.svg" alt="Invest in your lifestyle">
-          <img class="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden" src="https://www.workwise.sg/wp-content/uploads/2019/10/Optimus-2-b.jpg" atl=" Choose your own future.">
-          <h1 class="mt-6 text-2xl font-bold text-blue-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl"> 
-            You can look for estate from anywhere. 
-            <br class="hidden lg:inline"><span class="text-orange-500"> Take advatage of it.</span>
-          </h1>
-          <p class="mt-2 text-blue-800 sm:mt-4 sm:text-xl"> 
-              "Buy real estate in areas where the path exists and buy more real estate where there is no path, but you can create your own.” 
-             - David Waronker, American real estate investor
-          </p>
-          <div class="mt-4 sm:mt-6">
-            <a href="#" class="btn btn-orange px-8 shadow-lg sm:text-base"> Book your estate </a>
-             <a href="#" class="btn ml-2 btn-gray sm:text-base"> Learn More </a>
-          </div>
-        </div>
-      </div>
-      <div class="hidden lg:block lg:w-1/2 lg:relative">
-        <img class="absolute inset-0 h-full w-full object-cover object-center" src="https://www.workwise.sg/wp-content/uploads/2019/10/Optimus-2-b.jpg" atl=" Choose your own future.">
+  <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
+<body class="bg-gray-300">
+  <%= yield %>
+</body>
 
-      </div>
-    </div>
-  <div class="flex flex-wrap -mx-4">
-    <div class="w-full lg:w-1/2 xl:w-1/3 px-4 ml-auto mt-6 bg-gray-200 rounded overflow-hidden shadow-lg">
-        <img class="w-full mt-6 rounded-lg shadow-xs sm:mt-2 sm:h-64 sm:w-full sm:object-cover sm:object-center" src="https://xingsuo.me/i/2019/05/modern-pictures-decor-studio-ideas-photos-design-style-styles-small-kitchen-luxury-apartment-delightful-930x535.jpg" alt="Studio Apartments">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">Studio Apartments</div>
-                <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                </p>
-            </div>
-              <div class="px-6 py-4">
-                <a href="#" class="btn btn-gray sm:text-base"> Read More </a>
-              </div>
-        </div>
-     </div>
-        <div class="w-full lg:w-1/2 xl:w-1/3 px-4 mr-auto mt-6 bg-gray-200 rounded overflow-hidden shadow-lg">
-            <img class="w-full mt-6 rounded-lg shadow-xs sm:mt-2 sm:h-64 sm:w-full sm:object-cover sm:object-center " src="http://www.metalportal.net/feature/One-Bedroom-Apartment-Luxury-Apartments-By-Mandarin.jpg" alt="1 Bedroom Apartment">
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">One Bedroom Apartments</div>
-                     <p class="text-gray-700 text-base">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                    </p>
-               </div>
-                    <div class="px-6 py-4">
-                        <a href="#" class="btn btn-gray sm:text-base"> Read More </a>
-                    </div>
-              </div>
-         </div>       
-    </div>
-    <%= yield %>
-  </body>
 </html>

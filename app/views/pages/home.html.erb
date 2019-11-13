@@ -1,5 +1,5 @@
-<div class="bg-gray-100 flex">
-    <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
+<div class="section">
+    <div class="sub-section px-8 py-12 max-w-md mx-auto lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
         <div class="xl:max-w-lg xl:ml-auto">
             <img class="h-12" src="http://tenbridges-re.com/wp-content/uploads/2018/02/tenbridges-logo_color.svg"
                 alt="Invest in your lifestyle">
@@ -29,54 +29,39 @@
     </div>
 </div>
 
-<div class="flex">
-    <div class="w-full lg:w-1/2 xl:w-1/3 px-4 pr-3 mt-4 bg-gray-200 border rounded-lg overflow-hidden shadow-lg">
-        <img class="w-full mt-6 rounded-lg shadow-xs sm:mt-2 sm:h-64 sm:w-full sm:object-cover sm:object-center"
-            src="https://xingsuo.me/i/2019/05/modern-pictures-decor-studio-ideas-photos-design-style-styles-small-kitchen-luxury-apartment-delightful-930x535.jpg"
-            alt="Studio Apartments">
-        <div class="px-6 py-4">
-            <div class="font-bold text-blue-900 text-lg leading-tight truncate"">Studio Apartments
-                <p class=" text-gray-600 text-m font-thinner tracking-wide">
-                        Open space&bull;1 Bed&bull;1 Bath
-                </p>
-                 <button type="button" class="rounded-full px-6 mr-2 bg-green-500 text-white p-1 rounded leading-none flex items-center"> New </button>
-            </div>
-            <div class="px-6 py-4">
-                <a href="#" class="btn btn-orange sm:text-base"> Read More </a>
-            </div>
-        </div>
+        <%= render "header" %>
+
+
+<div class="flex flex-wrap px-12 py-24">
+    <div class="w-full text-center mb-10">
+        <h1 class="text-blue-900 font-semibold text-3xl">View Categories</h1>
+        <p class="text-gray-600 text-xl font-thinner ">Schedule a Tour and Find Your New Home</p>
     </div>
-    <div class="w-full lg:w-1/2 xl:w-1/3 px-4 pl-3 mt-4 bg-gray-200 border rounded-lg overflow-hidden shadow-lg">
-        <img class="w-full mt-6 rounded-lg shadow-xs sm:mt-2 sm:h-64 sm:w-full sm:object-cover sm:object-center "
-            src="http://www.metalportal.net/feature/One-Bedroom-Apartment-Luxury-Apartments-By-Mandarin.jpg"
-            alt="1 Bedroom Apartment">
-        <div class="px-6 py-4">
-            <div class="font-bold text-blue-900 text-lg leading-tight truncate">One Bedroom Apartments
-                <p class="text-gray-600 text-m font-thinner tracking-wide">
-                     Closed space&bull;1 Bed&bull;1 Bath
-                     
-                </p>
-           </div>     
-        </div>
-        <div class="px-6 py-4">
-            <a href="#" class="btn btn-orange sm:text-base"> Read More </a>
-        </div>
-    </div>
-    <div class="w-full lg:w-1/2 xl:w-1/3 px-4 pr-3 mt-4 bg-gray-200 border rounded-lg overflow-hidden shadow-lg">
-        <img class="w-full mt-6 rounded-lg shadow-xs sm:mt-2 sm:h-64 sm:w-full sm:object-cover sm:object-center"
-            src="https://q-cf.bstatic.com/images/hotel/max1024x768/123/123846352.jpg"
-            alt="Two Bedroom Apartments">
-        <div class="px-6 py-4">
-            <div class="font-bold text-blue-900 text-lg leading-tight truncate"">Two Bedroom Apartments
-                <p class=" text-gray-600 text-m font-thinner tracking-wide">
-                    2 Beds&bull;2 Baths
-                </p>
-                <button type="button" class="rounded-full px-6 mr-2 bg-green-500 text-white p-1 rounded leading-none flex items-center"> New </button>
-            </div>
-            <div class="px-6 py-4">
-                <a href="#" class="btn btn-orange sm:text-base"> Read More </a>
+
+    <div class="flex justify-end w-full">
+        <div class="mr-5">
+            <label class="block uppercase tracking-wide text-blue-900 text-xl font-semibold mb-2" for="grid-state">
+                View: </label>
+            <div class="relative">
+                <select 
+                    class="dropdown-sort mr-3 block appearance-none w-full bg-gray-200 border border-gray-200 cursor-pointer text-gray-700 hover:bg-white py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-gray-lighter focus:border-gray-lighter"
+                    id="grid-category">
+                    <option>Mr. Charles Wilkinson</option>
+                    <option>Laurence Rowe</option>
+                    <option>Jerrod Heidenreich IV</option>
+                </select>
+                <div class="arrow-down pointer-events-none absolute flex items-center px-2 text-grey-darker">
+                    <%= image_tag "https://img.icons8.com/material-outlined/24/000000/chevron-down.png", width: 15 %>
+                </div>            
             </div>
         </div>
     </div>
 
+    <div class="flex flex-wrap w-full">
+        <%= render "residence_card", residences: @residences %>
+    </div>
+
+    <div class="flex flex-wrap w-full">
+        <%= render "amenities_card", amenities: @amenities %>
+    </div>   
 </div>
